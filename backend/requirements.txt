@@ -21,3 +21,5 @@ social-auth-core==4.5.4
 sqlparse==0.5.1
 tzdata==2024.2
 urllib3==2.2.3
+gunicorn==20.1.0
+python-dotenv==1.0.0

@@ -3,16 +3,17 @@
 <html >
 <head>
     <meta charset="UTF-8">
-    <title>Nice dark sign in form</title>
+    <title>Sign in</title>
     <link rel="stylesheet" href='{% static "css/login.css" %}'>
 </head>
 
 <body>
   <h1>Sign In</h1>
 <div id="wrapper">
-	<form id="signin" method="" action="" autocomplete="off">
-		<input type="text" id="user" name="user" placeholder="username" />
-		<input type="password" id="pass" name="pass" placeholder="password" />
+	<form id="signin" action="{% url 'login' %}" method="post">
+		{% csrf_token %}
+		<input type="text" id="user" name="username" placeholder="username" />
+		<input type="password" id="pass" name="password" placeholder="password" />
 		<button type="submit">&#xf0da;</button>
 	</form>
 </div>
